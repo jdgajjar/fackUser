@@ -1,0 +1,73 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.App-header h1 {
+  color: #667eea;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.App-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.App-container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.App-left,
+.App-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.error-message {
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #c33;
+}
+
+.App-footer {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  text-align: center;
+  color: #666;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .App-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .App-header h1 {
+    font-size: 2rem;
+  }
+  
+  .App-container {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: fake-user-generator
+    env: node
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: npm install && cd frontend && npm install && npm run build && cd ..
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    healthCheckPath: /health
